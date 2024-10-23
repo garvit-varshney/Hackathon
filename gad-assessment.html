@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAD Assessment - Restore Health</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Restore Health</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="health-tools.html">Health Tools</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Generalised Anxiety Disorder Assessment</h1>
+        <p>Over the last 2 weeks, how often have you been bothered by the following problems?</p>
+        <form id="gad-form">
+            <!-- Add 7 questions here -->
+            <div class="question">
+                <p>1. Feeling nervous, anxious, or on edge</p>
+                <select name="q1" required>
+                    <option value="">Select an option</option>
+                    <option value="0">Not at all</option>
+                    <option value="1">Several days</option>
+                    <option value="2">More than half the days</option>
+                    <option value="3">Nearly every day</option>
+                </select>
+            </div>
+            <!-- Repeat for questions 2-7 -->
+            <button type="submit">Calculate Score</button>
+        </form>
+
+        <div id="gad-result"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Restore Health. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

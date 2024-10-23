@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(64, 188, 186, 255);
+    /* Logo color */
+    padding: 10px 20px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left img {
+    position: relative;
+    width: 76px;
+    position: relative;
+    top: 1px;
+    left: 11px;
+}
+
+.brand-name {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    z-index: 1;
+    font-family: "Playwrite GB S", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.nav-right ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-right li {
+    margin-left: 20px;
+    position: relative;
+}
+
+.nav-right a {
+    text-decoration: none !important; /* Ensure no underline */
+    color: white;
+    font-size: 18px;
+    padding: 8px 12px;
+    position: relative;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.nav-right a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.nav-right a:hover::after {
+    width: 100%;
+    /* Expand underline from left to right */
+}
+
+.nav-right a:hover {
+    color: #004d4b;
+    /* Slightly darker shade of the logo color */
+}
+
+/* Health Articles Section */
+.health-articles {
+    padding: 15px 10%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Section Heading */
+.section-heading {
+    font-size: 32px;
+    font-weight: bold;
+    color: #004d4b;
+    margin-bottom: 15px;
+    align-self: flex-start;
+}
+
+/* Article Boxes Layout */
+.article-boxes {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; /* Left box wider */
+    gap: 20px;
+    width: 100%; /* Full width of the section */
+    align-items: stretch; /* Ensure equal height for both boxes */
+}
+
+/* Article Box */
+.article-box {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%; /* Stretch to fill grid column height */
+}
+
+/* Anchor within Article Box */
+.article-box a {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    width: 100%; /* Full width of the article box */
+    height: 100%; /* Full height of the article box */
+    text-decoration: none !important; /* Ensure no underline */
+    color: inherit; /* Inherit color from the parent */
+}
+
+/* Image within Article Box */
+.article-box img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    height: auto; /* Allow the image to grow and maintain aspect ratio */
+    max-height: 250px; /* Limit maximum height */
+    object-fit: cover; /* Ensure image covers the area */
+    object-position: 50% 30%; /* Adjust which part of the image is shown */
+    flex-grow: 1; /* Let the image take extra space */
+}
+
+/* Content within Article Box */
+.article-box-content {
+    
+    /* padding-left: 20px; */
+    text-align: left;
+    width: 95%;
+    flex-shrink: 0; /* Ensure content doesn’t shrink */
+    color: rgba(64, 188, 186, 0.1);
+    
+}
+
+/* Article Title */
+.article-box-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Article Excerpt */
+.article-box-excerpt {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Hover Effects for Article Box */
+.article-box:hover {
+    transform: translateY(-10px);
+}
+/* Healthcare Tools Section */
+.health-tools {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 10%;
+    background-color: rgba(64, 188, 186, 1);
+}
+
+/* Heading */
+.health-tools-heading {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    align-self: flex-start;
+    margin-bottom: 20px;
+}
+
+/* Tool Container */
+.tool-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+/* Individual Tool Div */
+.tool-container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 30%;
+}
+
+/* Tool Circle */
+.tool-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    overflow: hidden; /* Ensures the image stays within the circle */
+    transition: transform 0.3s ease; /* Smooth transformation */
+}
+
+/* Hover effect on circle */
+.tool-container > div:hover .tool-circle {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Fading effect on the image */
+.tool-circle img {
+    max-width: 100%;
+    border-radius: 50%;
+    transition: opacity 0.3s ease; /* Fading effect */
+}
+
+.tool-container > div:hover .tool-circle img {
+    opacity: 0.7; /* Image fades when hovering */
+}
+
+/* Tool Link */
+.tool-link {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect on the link */
+.tool-container > div:hover .tool-link {
+    color: #f7f7f7;
+    transform: scale(1.1); /* Slight enlarge on hover */
+}
+
+
+
+/* About Us Section */
+.about-us {
+    padding: 15px 10%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: left;
+    width: 80%;
+}
+
+.about-team {
+    list-style-type: none;
+    padding: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.about-team li {
+    margin-bottom: 10px;
+}
